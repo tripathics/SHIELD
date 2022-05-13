@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Chennai board Cardview</title>
+</head>
+<body class="grid-container">
+    <nav>
+        <div id="nav-bar">
+            <button id="menu-btn" class="menu" onclick="toggleMenu()" aria-label="Menu button">
+                <svg class="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+                    <title>Menu</title>
+                    <path d="M10 80h80a5 5 0 000-10H10a5 5 0 000 10zm0-25h80a5 5 0 000-10H10a5 5 0 000 10zM5 25a5 5 0 005 5h80a5 5 0 000-10H10a5 5 0 00-5 5z" fill="currentColor"/>
+                </svg>
+            </button>
+            <ul id="nav-colapse-items">
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/projects">Logout</a></li>
+                <li><a href="/posts">About</a></li>
+            </ul>
+            <div class="brand-logo">
+                <img src="media/logo.jpg" alt="SHIELD">
+            </div>
+        </div>
+        <div id="nav-exp-items" class="hidden">
+            <div class="brand-logo">
+                <img src="media/logo.jpg" alt="SHIELD">
+                <h3>SHIELD</h3>
+            </div>
+            <ul>
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/projects">Logout</a></li>
+                <li><a href="/posts">About</a></li>
+            </ul>                              
+        </div>
+    </nav>
+
+    <main>
+        <header id="board">
+            <div class="board-title">
+                <img src="board-page.png" alt="board page graphic">
+                <h1>Chennai</h1>
+            </div>
+            <div class="btns">
+                <button>
+                    <div class="btn-logo">
+                        <img src="lock.png">
+                    </div>
+                    <div class="btn-label">
+                        LOCK
+                    </div>
+                </button>
+                <button>
+                    <div class="btn-logo">
+                        <img src="unlock.png">
+                    </div>
+                    <div class="btn-label">
+                        UNLOCK
+                    </div>
+                </button>
+            </div>
+        </header>
+        <div class="content">
+            <div class="ct-item">
+                <h2>Chairman</h2>
+                <p>Sh. Himanshu Gupta IAS</p>
+            </div>
+            <hr>
+            <div class="ct-item">
+                <h2>Contact</h2>
+                <p>+3890187</p>
+            </div>
+            <hr>
+            <div class="ct-item">
+                <h2>Email</h2>
+                <p>diredu@nic.in</p>
+            </div>
+            <hr>
+            <div class="ct-item">
+                <h2>Website</h2>
+                <p>http://www.edudel.nic.in</p>
+            </div>
+            <hr>
+        </div>
+    </main>
+</body>
+</html>
