@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="static/script.js"></script>
+
+    <title>SHIELD Login</title>
+</head>
+<body class="grid-container">
+    <nav>
+        <div id="nav-bar">
+            <button id="menu-btn" class="menu" onclick="toggleMenu()" aria-label="Menu button">
+                <svg class="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+                    <title>Menu</title>
+                    <path d="M10 80h80a5 5 0 000-10H10a5 5 0 000 10zm0-25h80a5 5 0 000-10H10a5 5 0 000 10zM5 25a5 5 0 005 5h80a5 5 0 000-10H10a5 5 0 00-5 5z" fill="currentColor"/>
+                </svg>
+            </button>
+            <ul id="nav-colapse-items">
+                <li><a href="/">About</a></li>
+            </ul>
+            <div class="brand-logo">
+                <img src="static/media/logo.jpg" alt="SHIELD">
+            </div>
+        </div>
+        <div id="nav-exp-items">
+            <div class="brand-logo">
+                <img src="static/media/logo.jpg" alt="SHIELD">
+                <h3>SHIELD</h3>
+            </div>
+            <ul>
+                <li><a href="/">About</a></li>
+            </ul>                            
+        </div>
+    </nav>
+    <main>
+        <form class="form-control" action="/">
+            <img class="login-graphic" src="static/media/login.png" alt="Login graphic">
+            <div>
+                <label for="Username">Username</label>
+                <input name="Username" type="text" placeholder="Username">
+            </div>
+            <div>
+                <label for="Password">Password</label>
+                <input name="Passowrd" type="text" placeholder="********">
+            </div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        &copy; 2022-Present Team Revolutionists
+    </footer>
+</body>
+</html>

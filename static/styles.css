@@ -1,6 +1,30 @@
+:root {
+    --shieldBlue: #29A7F1;
+    --delhi: #2889e4;
+    --mumbai: #9a019a;
+    --hyderabad: #4f77c2;
+    --ahmedabad: #8b8b63;
+    --lucknow: #765e7e;
+    --chandigarh: #696969;
+    --chennai: #a2575b;
+    --jaipur: #695555;
+}
+
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
+}
+
+/* For disabling that outline around input boxes */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Navigation */
@@ -19,7 +43,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: .2rem;
-    background-color: #009DF0;
+    background-color: var(--shieldBlue);
     height: 3rem;
 }
 
@@ -57,8 +81,7 @@ ul#nav-colapse-items {
 /* Nav items within expanded nav */
 #nav-exp-items {
     width: 100%;
-    /* background-color: #b6373e; */
-    background-color: #009DF0;
+    background-color: var(--shieldBlue);
     position: absolute;
     padding-bottom: 0.5em;
 }
@@ -153,6 +176,10 @@ button.menu:active {
 
 /* cardview */
 
+main {
+    min-height: calc(100vh - 9rem);
+}
+
 .cardview {
     padding: 1.5rem;
     display: flex;
@@ -163,7 +190,7 @@ button.menu:active {
 .card {
     border: solid 1px transparent;
     border-radius: 0.375rem;
-    box-shadow: 3px 3px 8px 1px #bcbcbc;
+    box-shadow: 2px 2px 6px 1px #c9c9c9;
     margin: 1.5rem;
     width: 10rem;
     height: 8rem;
@@ -172,9 +199,26 @@ button.menu:active {
     padding: 0.5rem;
 }
 
+.card:hover {
+    box-shadow: 2px 2px 8px 2px #bcbcbc;
+}
+
+.card:active {
+    background-color: #eeeeee;
+}
+
 .card > img {
     max-width: 50%;
     margin: auto;
+}
+
+.card > a {
+    color: rgb(49, 49, 49);
+    text-decoration: none;
+}
+
+.card > a:hover {
+    text-decoration: underline;
 }
 
 p.card-label {
@@ -183,7 +227,6 @@ p.card-label {
 
 /* board page header */
 header#board {
-    background-color: #dc6d73;
     height: 40vh;
     padding: 2rem;
 }
@@ -197,6 +240,7 @@ div.board-title {
 
 div.board-title > img {
     height: 150px;
+    margin: 0 2rem;
 }
 
 /* buttons */
@@ -210,14 +254,21 @@ div.board-title > img {
 .btns > button {
     color: #fff;
     font-size: x-large;
-    background-color: #dc6d73;
     border: solid 1px transparent;
     border-radius: 0.375rem;
-    box-shadow: 3px 3px 8px 1px #515151;
+    box-shadow: 3px 3px 8px 1px #2f2f2fc2;
     margin: 0 1.5rem;
     width: 10rem;
     height: 8rem;
     padding: 0.5rem; 
+}
+
+.btns > button:hover {
+    box-shadow: 3px 3px 8px 1px #1f1f1fc2;
+}
+
+.btns > button:active {
+    box-shadow: 2px 2px 6px 1px #1f1f1fc2 inset;
 }
 
 div.btn-logo {
@@ -261,13 +312,90 @@ div.content {
     color: grey;
 }
 
+footer {
+    padding: 1.5rem 1rem;
+    margin: auto;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    height: 4rem;
+    background-color: #a9dfff;
+    color: #000;
+    text-align: center;
+}
+
+/* login */
+
+img.login-graphic {
+    height: 150px;
+    width: 150px;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+form.form-control {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form.form-control input, form.form-control textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    margin-top: 0.35rem;
+    padding: 0.45rem 0.75rem;
+    border: none;
+    background-color: #dadada;
+    display: block;
+}
+
+form.form-control input {
+    border-bottom: 2px solid transparent;
+    margin-bottom: 2rem;
+}
+
+form.form-control input:focus {
+    background-color: #fff;
+    border-bottom: 2px solid rgb(45, 80, 194);
+}
+
+form.form-control button {
+    padding: 0.4rem 0.6rem;
+    margin: 0.4rem auto;
+    font-size: 1.05rem;
+    border-color: transparent;
+    background-color: #c4c4c4;
+}
+
+form.form-control button:focus {
+    background-color: #afadad;
+}
+
+form.form-control button:hover {
+    background-color: #b3b3b3;
+}
+
+form.form-control button:active {
+    background-color: #979797;
+    box-shadow: 0 0 5px 1px #666666;
+}
+
 /* mobile */
 @media screen and (max-width: 500px){
-    .card {
+    .card{
         font-size: small;
         width: 7rem;
         height: 5rem;
         padding: 0.3rem;
+    }
+
+    .btns > button {
+        font-size: small;
+        margin: 1rem;
+        width: 8rem;
+        height: 6rem;
 
     }
 }
@@ -277,8 +405,11 @@ div.content {
     @media screen and (min-width: 925px) {
         .grid-container {
             display: grid;
-            grid-template-areas: "nv mn";
+            grid-template-areas: 
+                "nv mn"
+                "ft mn";
             grid-template-columns: 2fr 4fr;
+            grid-template-rows: 1fr 4rem;
         }
 
         main {
@@ -296,8 +427,9 @@ div.content {
         }
 
         div#nav-exp-items {
+            position: absolute;
             display: block;
-            height: 100vh;
+            height: calc(100vh - 4rem);
             padding: 4rem 1rem;
         }
 
@@ -322,6 +454,21 @@ div.content {
             color: #fff;
             margin: 0.5rem;
             text-align: center;
+        }
+
+        footer {
+            grid-area: ft;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+}
+@supports not(display: grid){
+    @media screen and (min-width: 925px) {
+        main {
+            max-width: 60%;
+            margin: auto;
         }
     }
 }
