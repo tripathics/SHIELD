@@ -1,0 +1,216 @@
+:root {
+    --shieldBlue: #29A7F1;
+    --delhi: #2889e4;
+    --mumbai: #9a019a;
+    --hyderabad: #4f77c2;
+    --ahmedabad: #8b8b63;
+    --lucknow: #765e7e;
+    --chandigarh: #696969;
+    --chennai: #a2575b;
+    --jaipur: #695555;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* For disabling that outline around input boxes */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation */
+
+nav {
+    position: sticky;
+    font-size: 1.2em;
+    top: 0rem;
+    z-index: 2;
+}
+
+
+/* Nav bar on top */
+#nav-bar {
+    top: 0;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2rem;
+    background-color: var(--shieldBlue);
+    height: 4rem;
+}
+
+div.brand-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+}
+
+/* Nav items within nav bar */
+#nav-colapse-items {
+    display: flex;
+    flex-direction: row;
+}
+
+ul#nav-colapse-items {
+    padding-left: 1rem;
+}
+
+#nav-colapse-items li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 2.5rem;
+}
+
+#nav-colapse-items a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+#nav-colapse-items a:hover {
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+}
+
+/* Nav items within expanded nav */
+#nav-exp-items {
+    width: 100%;
+    background-color: var(--shieldBlue);
+    position: absolute;
+    padding-bottom: 0.5em;
+}
+
+#nav-exp-items li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+#nav-exp-items a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+#nav-exp-items a:hover {
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+}
+
+.hidden {
+    display: none;
+}
+
+button.menu {
+    background-color: transparent;
+    border: none;
+    border-radius: .275rem;
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-right: 0.2rem;
+}
+
+button.menu path, button.menu g {
+    fill: rgb(255, 255, 255);
+}
+
+button.menu:active {
+    background-color: #0074b2;
+}
+
+@media screen and (max-width: 800px){
+    #nav-colapse-items {
+        display: none;
+    }
+
+    button.menu {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    #nav-colapse-items {
+        display: flex;
+    }
+
+    button.menu {
+        display: none;
+    }
+
+    #nav-exp-items {
+        display: none;
+    }
+}
+
+/* brand under nav */
+.brand-logo {
+    position: relative;
+    height: 100%;
+}
+
+.brand-logo > img {
+    max-height: 100%;
+    width: auto;
+}
+
+/* homepage */
+
+/* header */
+header {
+    background-color: #0074b2;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1#logo-title {
+    font-size: 4rem;
+}
+
+article.story {
+    display: flex;
+    align-items: center;
+    margin: 3.5rem 2rem;
+}
+
+article.story > img {
+    height: 200px;
+    margin: 0 2rem 0 0;
+}
+
+div.txt > h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+div.txt > p {
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* mobile */
+@media screen and (max-width: 500px){
+    .card{
+        font-size: small;
+        width: 7rem;
+        height: 5rem;
+        padding: 0.3rem;
+    }
+
+    .lock-unlock > button {
+        font-size: small;
+        margin: 1rem;
+        width: 8rem;
+        height: 6rem;
+    }
+}

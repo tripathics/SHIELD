@@ -8,10 +8,6 @@
     --chandigarh: #696969;
     --chennai: #a2575b;
     --jaipur: #695555;
-    --itanagar: #008b8b;
-    --guwahati: #8fbc8f;
-    --kolkata: #2e8b57;
-    --bengaluru: #a0522d;
 }
 
 *, ::before, ::after {
@@ -36,30 +32,34 @@ body {
 nav {
     position: sticky;
     font-size: 1.2em;
-    top: 0;
+    top: 0rem;
     z-index: 2;
 }
+
 
 /* Nav bar on top */
 #nav-bar {
     top: 0;
     display: flex;
-    flex-flow: row;
+    flex-flow: row-reverse;
     justify-content: space-between;
     align-items: center;
     padding: .2rem;
     background-color: var(--shieldBlue);
-    height: 3rem;
+    height: 4rem;
+}
+
+div.brand-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
 }
 
 /* Nav items within nav bar */
 #nav-colapse-items {
     display: flex;
     flex-direction: row;
-}
-
-div#nav-exp-items > div.brand-logo {
-    display: none;
 }
 
 ul#nav-colapse-items {
@@ -444,79 +444,5 @@ form.form-control button:active {
         margin: 1rem;
         width: 8rem;
         height: 6rem;
-
-    }
-}
-
-/* desktop layout */
-@supports(display: grid) {
-    @media screen and (min-width: 925px) {
-        .grid-container {
-            display: grid;
-            grid-template-areas: 
-                "nv mn"
-                "ft mn";
-            grid-template-columns: 2fr 4fr;
-            grid-template-rows: 1fr 4rem;
-        }
-
-        main {
-            grid-area: mn;
-            overflow-y: scroll;
-            height: 100vh;
-        }
-
-        nav {
-            grid-area: nv;
-        }
-
-        div#nav-bar {
-            display: none;
-        }
-
-        div#nav-exp-items {
-            position: absolute;
-            display: block;
-            height: calc(100vh - 4rem);
-            padding: 4rem 1rem;
-        }
-
-        div#nav-exp-items ul {
-            padding: 0;
-        }
-
-        div#nav-exp-items li {
-            font-size: larger;
-            text-align: center;
-        }
-
-        div#nav-exp-items > div.brand-logo {
-            height: fit-content;
-            width: fit-content;
-            display: block;
-            padding: 2rem;
-            margin: auto;
-        }
-
-        div.brand-logo > h3 {
-            color: #fff;
-            margin: 0.5rem;
-            text-align: center;
-        }
-
-        footer {
-            grid-area: ft;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    }
-}
-@supports not(display: grid){
-    @media screen and (min-width: 925px) {
-        main {
-            max-width: 60%;
-            margin: auto;
-        }
     }
 }
