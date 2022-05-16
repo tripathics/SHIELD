@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 :root {
     --shieldBlue: #29A7F1;
     --delhi: #2889e4;
@@ -11,7 +13,7 @@
     --itanagar: #008b8b;
     --guwahati: #8fbc8f;
     --kolkata: #2e8b57;
-    --bengaluru: #a0522d;
+    --bengaluru: #76b576;
 }
 
 *, ::before, ::after {
@@ -158,7 +160,7 @@ button.menu:active {
     height: 100%;
 }
 
-.brand-logo > img {
+.brand-logo img {
     max-height: 100%;
     width: auto;
 }
@@ -498,7 +500,7 @@ form.form-control button:active {
             margin: auto;
         }
 
-        div.brand-logo > h3 {
+        div.brand-logo h3 {
             color: #fff;
             margin: 0.5rem;
             text-align: center;

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="static/styles.css">
-    <script src="static/script.js"></script>
+    <link rel="stylesheet" href="./static/styles.css">
+    <script src="./static/script.js"></script>
 
     <title>SHIELD | Itanagar</title>
 </head>
@@ -22,21 +22,25 @@
             <ul id="nav-colapse-items">
                 <li><a href="./">Dashboard</a></li>
                 <li><a href="./login.html">Logout</a></li>
-                <li><a href="./">About</a></li>
+                <li><a href="./homepage.html">About</a></li>
             </ul>
-            <div class="brand-logo">
-                <img src="./static/media/logo.jpg" alt="SHIELD">
-            </div>
+                <div class="brand-logo">
+                    <a href="./homepage.html">
+                        <img src="./static/media/logo.jpg" alt="SHIELD">
+                    </a>
+                </div>
         </div>
         <div id="nav-exp-items">
             <div class="brand-logo">
-                <img src="./static/media/logo.jpg" alt="SHIELD">
-                <h3>SHIELD</h3>
+                <a href="./homepage.html">
+                    <img src="./static/media/logo.jpg" alt="SHIELD">
+                    <h3>SHIELD</h3>
+                </a>
             </div>
             <ul>
                 <li><a href="./">Dashboard</a></li>
                 <li><a href="./login.html">Logout</a></li>
-                <li><a href="./">About</a></li>
+                <li><a href="./homepage.html">About</a></li>
             </ul>                            
         </div>
     </nav>
@@ -44,13 +48,13 @@
     
 <header id="board" style="background-color: var(--itanagar);">
     <div class="board-title">
-        <img src="static/media/cards/itanagar.png" alt="board page graphic">
+        <img src="./static/media/cards/itanagar.png" alt="board page graphic">
         <h1>Itanagar</h1>
     </div>
     <div class="lock-unlock">
         <button style="background-color: var(--itanagar);">
             <div class="btn-logo">
-                <img src="static/media/lock-unlock/lock2.png">
+                <img src="./static/media/lock-unlock/lock2.png">
             </div>
             <div class="btn-label">
                 LOCK
@@ -58,7 +62,7 @@
         </button>
         <button style="background-color: var(--itanagar);">
             <div class="btn-logo">
-                <img src="static/media/lock-unlock/unlock2.png">
+                <img src="./static/media/lock-unlock/unlock2.png">
             </div>
             <div class="btn-label">
                 UNLOCK
@@ -96,6 +100,7 @@
                 <div class="btn-label">LOCATE</div>
             </div>
         </button>
+
     </div>
 </div>
 
